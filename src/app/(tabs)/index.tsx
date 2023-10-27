@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Button, H3, Text, XStack, YStack } from "tamagui";
+import { Button, H3, ListItem, Text, View, XStack, YStack } from "tamagui";
 
 export default function Index() {
   const isFocused = useIsFocused();
@@ -14,7 +14,7 @@ export default function Index() {
   return (
     <YStack fullscreen paddingTop={insets.top} backgroundColor="$sms">
       <YStack>
-        <XStack padding="$3" alignItems="center" justifyContent="space-between">
+        <XStack padding="$4" alignItems="center" justifyContent="space-between">
           <H3 color="$yellow1Dark" fontWeight="bold" marginLeft="$3">
             Bem vindo, Cesar
           </H3>
@@ -27,46 +27,45 @@ export default function Index() {
       <YStack
         flexGrow={1}
         backgroundColor="$background"
-        borderTopWidth="$1"
-        borderTopColor="$background"
+        justifyContent="space-between"
+        padding="$3"
       >
-        <YStack height={170}>
-          <Text
-            backgroundColor="$sms"
-            color="$yellow1Dark"
-            paddingVertical="$3"
-            paddingHorizontal="$3"
-            fontWeight="bold"
+        <YStack space="$4">
+          <Text fontWeight="bold">Contrate um serviço</Text>
+          <ListItem
+            fontSize="$8"
+            alignItems="center"
+            backgroundColor="$backgroundStrong"
+            borderRadius="$3"
+            bordered
+            height="$8"
+            onPress={() => router.push(`/(tabs)/settings/profile`)}
+            iconAfter={ChevronRight}
           >
-            Solicitaçõs pendentes
-          </Text>
-          <YStack
-            flex={1}
-            backgroundColor="$sms"
-            padding="$3"
-            justifyContent="center"
+            Faxineira
+          </ListItem>
+          <ListItem
+            fontSize="$8"
+            alignItems="center"
+            backgroundColor="$backgroundStrong"
+            borderRadius="$3"
+            bordered
+            height="$8"
+            onPress={() => router.push(`/(tabs)/settings/profile`)}
+            iconAfter={ChevronRight}
           >
-            <Button
-              onPress={() => router.push(`/(tabs)/pending`)}
-              theme="green_active"
-              height={"$8"}
-            >
-              Você possui 2 contratos pendentes
-              <ChevronRight />
-            </Button>
-          </YStack>
+            Limpeza
+          </ListItem>
         </YStack>
-        <YStack flexGrow={2}>
-          <Text
-            backgroundColor="$sms"
-            color="$yellow1Dark"
-            paddingVertical="$3"
-            paddingHorizontal="$3"
-            fontWeight="bold"
-          >
-            Proximos serviços
-          </Text>
-        </YStack>
+        <View
+          backgroundColor="$green4Dark"
+          padding="$3"
+          margin="$4"
+          alignSelf="center"
+          borderRadius="$3"
+        >
+          <Text fontWeight="bold">Duvídas? Entre em contato com a EasyBee</Text>
+        </View>
       </YStack>
       {isFocused && <StatusBar style="dark" />}
     </YStack>

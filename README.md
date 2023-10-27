@@ -1,2 +1,1 @@
-# easybee
 # easybee-client
