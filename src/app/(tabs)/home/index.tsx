@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Button, H3, ListItem, Text, View, XStack, YStack } from "tamagui";
+import { H3, ListItem, Text, View, XStack, YStack } from "tamagui";
 
 export default function Index() {
   const isFocused = useIsFocused();
@@ -39,7 +39,7 @@ export default function Index() {
             borderRadius="$3"
             bordered
             height="$8"
-            onPress={() => router.push(`/(tabs)/settings/profile`)}
+            onPress={() => router.push(`/(tabs)/home/${"Faxineira"}`)}
             iconAfter={ChevronRight}
           >
             Faxineira
@@ -51,7 +51,7 @@ export default function Index() {
             borderRadius="$3"
             bordered
             height="$8"
-            onPress={() => router.push(`/(tabs)/settings/profile`)}
+            onPress={() => router.push(`/(tabs)/home/${"Limpeza"}`)}
             iconAfter={ChevronRight}
           >
             Limpeza

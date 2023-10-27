@@ -27,7 +27,7 @@ const AppLayout = () => {
     const inTabsGroup = segments[0] === "(tabs)";
 
     if (session?.session && !inTabsGroup) {
-      router.replace("/(tabs)");
+      router.replace("/(tabs)/home");
     } else if (!session?.session) {
       router.replace("/sign-in");
     }

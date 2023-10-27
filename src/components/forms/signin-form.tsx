@@ -22,7 +22,7 @@ export function SignInForm() {
   });
 
   const onSubmit = (inputs: Inputs) => {
-    router.replace("/(tabs)");
+    router.replace("/(tabs)/home");
   };
 
   return (
