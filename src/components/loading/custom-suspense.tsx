@@ -30,12 +30,15 @@ export function CustomSuspense<T, C = T | T[]>({
       return component(data);
     } else {
       return (
-        <LoadingMessage message={`No ${name} found`} showSpinner={false} />
+        <LoadingMessage
+          message={`Carregando informações`}
+          showSpinner={false}
+        />
       );
     }
   } else if (promiseResult) {
     return component(promiseResult);
   } else {
-    return fallback ?? <LoadingMessage message={`Loading ${name}`} />;
+    return fallback ?? <LoadingMessage message={`Carregando informações`} />;
   }
 }

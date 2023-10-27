@@ -17,16 +17,16 @@ export default function Layout() {
         }}
       />
       <Stack.Screen
-        name="bank-informations"
+        name="cards"
         options={{
-          title: "Dados Bancários",
+          title: "Meus cartões",
           headerBackTitle: "Voltar",
         }}
       />
       <Stack.Screen
-        name="documents"
+        name="address"
         options={{
-          title: "Documentos Pessoais",
+          title: "Endereços",
           headerBackTitle: "Voltar",
         }}
       />

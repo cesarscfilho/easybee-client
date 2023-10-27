@@ -1,4 +1,5 @@
 import { Stack, useLocalSearchParams } from "expo-router";
+import React from "react";
 import { Text, YStack } from "tamagui";
 
 export default function Contract() {

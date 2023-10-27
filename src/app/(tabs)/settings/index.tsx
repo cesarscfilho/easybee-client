@@ -1,9 +1,7 @@
 import {
   ChevronRight,
   UserCircle,
-  Wrench,
   MapPin,
-  Wallet,
   LogOut,
   CreditCard,
 } from "@tamagui/lucide-icons";
@@ -31,32 +29,18 @@ export default function Index() {
         />
 
         <ListItem
-          title="Serviços"
-          subTitle="Diarista, Faxineiro"
-          icon={Wrench}
-          iconAfter={ChevronRight}
-        />
-
-        <ListItem
-          title="Endereço"
-          subTitle="Av, Hugo Musso 2380"
-          icon={MapPin}
-          iconAfter={ChevronRight}
-        />
-
-        <ListItem
-          onPress={() => router.push(`/(tabs)/settings/bank-informations`)}
-          title="Dados Bancários"
-          subTitle="Pix, Cartão de Crédito"
-          icon={Wallet}
-          iconAfter={ChevronRight}
-        />
-
-        <ListItem
-          onPress={() => router.push(`/(tabs)/settings/documents`)}
-          title="Documentos Pessoais"
-          subTitle="RG, CNH"
+          onPress={() => router.push(`/(tabs)/settings/cards`)}
+          title="Cartões"
+          subTitle="Veja seus cartões"
           icon={CreditCard}
+          iconAfter={ChevronRight}
+        />
+
+        <ListItem
+          onPress={() => router.push(`/(tabs)/settings/address`)}
+          title="Endereços"
+          subTitle="Veja seus endereçõs"
+          icon={MapPin}
           iconAfter={ChevronRight}
         />
 
