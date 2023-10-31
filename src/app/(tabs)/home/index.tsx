@@ -1,62 +1,25 @@
 import { useIsFocused } from "@react-navigation/native";
-import { ChevronRight } from "@tamagui/lucide-icons";
-import { Image } from "expo-image";
-import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { H3, ListItem, Text, View, XStack, YStack } from "tamagui";
+import { Text, View, YStack } from "tamagui";
+
+import { HomeHeader } from "@/components/home-header";
+import { ServiceList } from "@/components/services-list";
 
 export default function Index() {
   const isFocused = useIsFocused();
   const insets = useSafeAreaInsets();
-  const router = useRouter();
 
   return (
     <YStack fullscreen paddingTop={insets.top} backgroundColor="$sms">
-      <YStack>
-        <XStack padding="$4" alignItems="center" justifyContent="space-between">
-          <H3 color="$yellow1Dark" fontWeight="bold" marginLeft="$3">
-            Bem vindo, Cesar
-          </H3>
-          <Image
-            style={{ width: 35, height: 30 }}
-            source={require("@/assets/logos/icon_easybee_black.png")}
-          />
-        </XStack>
-      </YStack>
+      <HomeHeader title="Bem vindo, Cesar" />
       <YStack
         flexGrow={1}
         backgroundColor="$background"
         justifyContent="space-between"
         padding="$3"
       >
-        <YStack space="$4">
-          <Text fontWeight="bold">Contrate um serviço</Text>
-          <ListItem
-            fontSize="$8"
-            alignItems="center"
-            backgroundColor="$backgroundStrong"
-            borderRadius="$3"
-            bordered
-            height="$8"
-            onPress={() => router.push(`/(tabs)/home/${"Faxineira"}`)}
-            iconAfter={ChevronRight}
-          >
-            Faxineira
-          </ListItem>
-          <ListItem
-            fontSize="$8"
-            alignItems="center"
-            backgroundColor="$backgroundStrong"
-            borderRadius="$3"
-            bordered
-            height="$8"
-            onPress={() => router.push(`/(tabs)/home/${"Limpeza"}`)}
-            iconAfter={ChevronRight}
-          >
-            Limpeza
-          </ListItem>
-        </YStack>
+        <ServiceList />
         <View
           backgroundColor="$green4Dark"
           padding="$3"

@@ -3,7 +3,7 @@ import { ExpoConfig } from "expo/config";
 const projectId = "0653875e-c929-486d-a05b-0dacf79007d5";
 const name =
   process.env.EXPO_PUBLIC_APP_VARIANT === "production"
-    ? "Easybee - Client"
+    ? "Easybee - Cliente"
     : "ESBC Dev";
 
 const scheme =

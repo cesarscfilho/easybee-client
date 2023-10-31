@@ -9,7 +9,6 @@ const AuthContext = React.createContext<{
   isLoading: boolean;
 } | null>(null);
 
-// This hook can be used to access the user info.
 export function useSession() {
   const value = React.useContext(AuthContext);
   if (process.env.NODE_ENV !== "production") {

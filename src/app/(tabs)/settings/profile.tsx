@@ -4,8 +4,8 @@ import { UpdateProfileForm } from "@/components/forms/update-profile-form";
 
 export default function Profile() {
   return (
-    <YStack fullscreen padding="$3" space="$6">
-      <ScrollView showsVerticalScrollIndicator={false}>
+    <YStack fullscreen>
+      <ScrollView showsVerticalScrollIndicator={false} space="$6" padding="$3">
         <H3>Atualizar perfil</H3>
         <UpdateProfileForm />
       </ScrollView>

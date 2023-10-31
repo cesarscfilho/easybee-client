@@ -10,7 +10,7 @@ export default function Contract() {
       <Stack.Screen
         options={{
           title: serviceId ?? "",
-          headerBackTitle: "Categories",
+          headerBackTitle: "Home",
         }}
       />
       <YStack fullscreen padding="$3" space="$6">
